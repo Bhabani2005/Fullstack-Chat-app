@@ -1,0 +1,5 @@
+@import "tailwindcss";
+@plugin "daisyui"{
+    themes: light --default, dark --prefersdark,cupcake,bumblebee,emerald,corporate,synthwave,retro,cyberpunk,valentine,halloween,garden,forest,aqua,lofi,pastel,night,dracula,coffee,autumn,blackberry,lemonade,luxury,business,wireframe,black,fantasy,acid,cmyk,winter
+}
+/* @import "daisyui/dist/full.css"; Zero Config */
