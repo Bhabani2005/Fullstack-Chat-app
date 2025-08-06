@@ -6,12 +6,14 @@ import cookieParser from 'cookie-parser';
 import messageRoutes from './routes/messageRoute.js';
 import cors from 'cors';
 import { app,server } from './lib/socket.js';
-import path from 'path';
+import path,{dirname} from 'path';
+import {fileURLToPath} from 'url';
 
 dotenv.config();
 // const app=express();
 const PORT=process.env.PORT;
-const __dirname = path.resolve();
+const __filename= fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 app.use(express.json({limit: '50mb'}));
 app.use(cookieParser());
