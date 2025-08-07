@@ -20,6 +20,9 @@ const App = () => {
     checkAuth();
   }, [checkAuth]);
   console.log({authUser});
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
   if(isCheckingAuth && !authUser) {
     return(
     <div className='flex items-center justify-center h-screen'>
@@ -28,7 +31,7 @@ const App = () => {
     ) 
   }
   return (
-    <div data-theme={theme}>
+    <div>
       <Navbar/>
       <Routes>
         <Route path="/" element={authUser ? <HomePage/>: <Navigate to="/login"/>} />
